@@ -1,0 +1,32 @@
+# Ignore build output directories
+/bin/
+/obj/
+
+# Ignore user-specific files
+.vs/
+.idea/
+*.user
+*.suo
+
+# Ignore compiled binary files
+*.dll
+*.exe
+*.pdb
+*.app
+*.apk
+*.dylib
+*.so
+
+# Ignore package directories
+/packages/
+
+# Ignore NuGet packages
+*.nupkg
+
+# Ignore build logs
+*.log
+
+# Ignore other temporary files
+*.swp
+*.bak
+*.tmp
