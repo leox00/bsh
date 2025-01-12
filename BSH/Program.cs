@@ -1,3 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using BSH.UI;
 
-Console.WriteLine("Hello, World!");
+namespace BSH
+{
+    class Program
+    {
+        static void Main()
+        {
+            var shell = new ShellPrompt();
+            shell.Start();
+        }
+    }
+}
