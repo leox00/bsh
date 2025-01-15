@@ -20,7 +20,7 @@ namespace BSH.Tests
             string command = "echo Hello NUnit";
 
             // Act
-            TestDelegate act = () => _handler.Execute(command);
+            TestDelegate act = () => _handler.ExecuteCommand(command);
 
             // Assert
             Assert.DoesNotThrow(act);
@@ -33,7 +33,7 @@ namespace BSH.Tests
             string command = "nonexistentcommand";
 
             // Act & Assert
-            Assert.DoesNotThrow(() => _handler.Execute(command));
+            Assert.DoesNotThrow(() => _handler.ExecuteCommand(command));
         }
     }
 }

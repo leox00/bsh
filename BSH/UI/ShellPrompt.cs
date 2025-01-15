@@ -4,8 +4,6 @@ namespace BSH.UI
 {
     public class ShellPrompt
     {
-        
-        
         private readonly CommandHandler _commandHandler;
 
         public ShellPrompt()
@@ -22,6 +20,7 @@ namespace BSH.UI
                 Console.Write("=> ");
                 string input = Console.ReadLine();
                 _commandHandler.ExecuteCommand(input);
+                HistoryManager.SaveCommand(input);
             }
         }
     }
