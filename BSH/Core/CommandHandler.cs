@@ -61,7 +61,7 @@ namespace BSH.Core
                 {
                     StartInfo = new System.Diagnostics.ProcessStartInfo
                     {
-                        FileName = "/bin/bash", // or "cmd.exe" on Windows
+                        FileName = "/bin/bash",
                         Arguments = $"-c \"{command}\"",
                         RedirectStandardOutput = true,
                         RedirectStandardError = true,

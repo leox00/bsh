@@ -19,8 +19,11 @@ namespace BSH.UI
                 Console.WriteLine($"bsh: {Environment.CurrentDirectory}");
                 Console.Write("=> ");
                 string input = Console.ReadLine();
-                _commandHandler.ExecuteCommand(input);
-                HistoryManager.SaveCommand(input);
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    HistoryManager.SaveCommand(input);
+                    _commandHandler.ExecuteCommand(input);
+                }
             }
         }
     }
