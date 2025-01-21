@@ -1,7 +1,5 @@
 using BSH.Core;
 
-//TODO Fix blank line without '=>' when browsing history
-
 namespace BSH.UI
 {
     public class ShellPrompt
@@ -45,13 +43,13 @@ namespace BSH.UI
                 {
                     input = _historyManager.NavigateHistory(isUpArrow: true);
                     ClearLine();
-                    Console.Write(input);
+                    Console.Write("=> " + input);
                 }
                 else if (key.Key == ConsoleKey.DownArrow)
                 {
                     input = _historyManager.NavigateHistory(isUpArrow: false);
                     ClearLine();
-                    Console.Write(input);
+                    Console.Write("=> " + input);
                 }
                 else if (key.Key == ConsoleKey.Backspace)
                 {

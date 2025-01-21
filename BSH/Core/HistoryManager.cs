@@ -91,7 +91,7 @@ namespace BSH.Core
                 Console.WriteLine($"Error loading history: {ex.Message}");
             }
 
-            return false; // No more history to load
+            return false;
         }
 
         private static string ParseCommand(string line)
